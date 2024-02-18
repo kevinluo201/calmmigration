@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  number: MyString
+  name: MyString
+  draw_at: 2024-02-18 10:53:39
+  size: MyString
+  minister: MyString
+  crs: MyString
+  tie_breaking_at: 2024-02-18 10:53:39
+
+two:
+  number: MyString
+  name: MyString
+  draw_at: 2024-02-18 10:53:39
+  size: MyString
+  minister: MyString
+  crs: MyString
+  tie_breaking_at: 2024-02-18 10:53:39
