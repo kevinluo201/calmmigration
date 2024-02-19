@@ -1,14 +1,4 @@
-<p style="color: green"><%= notice %></p>
+<%= datagrid_form_for @grid, method: :get, url: rounds_path %>
 
-<h1>Rounds</h1>
-
-<div id="rounds">
-  <% @rounds.each do |round| %>
-    <%= render round %>
-    <p>
-      <%= link_to "Show this round", round %>
-    </p>
-  <% end %>
-</div>
-
-<%= paginate @rounds %>
+<%= datagrid_table @grid %>
+<%= paginate(@grid.assets) %>
