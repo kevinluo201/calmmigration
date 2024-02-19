@@ -1,4 +1,3 @@
-<%= datagrid_form_for @grid, method: :get, url: rounds_path %>
-
-<%= datagrid_table @grid %>
-<%= paginate(@grid.assets) %>
+<h1 class="title">EE Rounds</h1>
+<%= datagrid_table @grid, html: { class: 'table is-striped is-hoverable is-fullwidth' } %>
+<%= paginate @grid.assets, window: 2 %>
