@@ -1,9 +1,12 @@
 <h1 class="title">EE Rounds</h1>
-<button
+<div
+  id="subscribe-to-rounds"
   data-controller="hello"
-  data-action="click->hello#subscribe"
+  data-hello-vapid-public-key-value="<%= Base64.urlsafe_decode64(Rails.application.credentials.dig(:webpush, :public_key)).bytes %>"
+  data-hello-subscribed-value="false"
 >
-  Subscribe
-</button>
+  <span data-hello-target="text">Subscribe to the new round notification:</span>
+  <%= button_tag('Subscribe', data: { 'hello-target': 'button', action: 'click->hello#toggleSubscription' }) %>
+</div>
 <%= datagrid_table @grid, html: { class: 'table is-striped is-hoverable is-fullwidth' } %>
 <%= paginate @grid.assets, window: 2 %>
