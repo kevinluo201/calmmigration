@@ -1,3 +1,9 @@
 <h1 class="title">EE Rounds</h1>
+<button
+  data-controller="hello"
+  data-action="click->hello#subscribe"
+>
+  Subscribe
+</button>
 <%= datagrid_table @grid, html: { class: 'table is-striped is-hoverable is-fullwidth' } %>
 <%= paginate @grid.assets, window: 2 %>
