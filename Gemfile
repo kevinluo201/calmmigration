@@ -48,6 +48,7 @@ gem "faraday", "~> 2.9.0"
 gem "kaminari", "~> 1.2.2"
 gem "datagrid", "~> 1.8.1"
 gem 'web-push', "~> 3.0.1"
+gem 'whenever', "~> 1.0.0", require: false
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
