@@ -1,4 +1,14 @@
 class WebpushNotification < ApplicationRecord
+  def self.send_notifications(message)
+    WebpushNotification.find_each do |notification|
+      begin
+        notification.send_message(message)
+      rescue WebPush::ExpiredSubscription
+        notification.destroy
+      end
+    end
+  end
+
   def send_message(message)
     WebPush.payload_send(
       endpoint: endpoint,
