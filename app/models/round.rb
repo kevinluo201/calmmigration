@@ -12,7 +12,7 @@ class Round < ApplicationRecord
 
   def notification_message
     {
-      title: "Express Entry Round ##{number}",
+      title: "🇨🇦 Express Entry Round ##{number}",
       body: "Invitations issued: #{size}, CRS: #{crs}, Tie-breaking rule: #{tie_breaking_at}",
       data: {
         url: round_url
