@@ -9,6 +9,7 @@ export default class extends Controller {
   }
 
   connect() {
+    navigator.serviceWorker.register('/service-worker.js')
     navigator.serviceWorker.ready.then((serviceWorkerRegistration) => {
       serviceWorkerRegistration.pushManager.getSubscription().then((subscription) => {
         if (subscription) {
@@ -40,8 +41,6 @@ export default class extends Controller {
   }
 
   async subscribe() {
-    navigator.serviceWorker.register('/service-worker.js')
-
     navigator.serviceWorker.ready.then((serviceWorkerRegistration) => {
       serviceWorkerRegistration.pushManager.subscribe({
         userVisibleOnly: true,

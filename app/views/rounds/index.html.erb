@@ -6,7 +6,7 @@
   data-hello-subscribed-value="false"
 >
   <span data-hello-target="text">Subscribe to the new round notification:</span>
-  <%= button_tag('Subscribe', data: { 'hello-target': 'button', action: 'click->hello#toggleSubscription' }) %>
+  <%= button_tag('Subscribe', class: 'button', data: { 'hello-target': 'button', action: 'click->hello#toggleSubscription' }) %>
 </div>
 <%= datagrid_table @grid, html: { class: 'table is-striped is-hoverable is-fullwidth' } %>
 <%= paginate @grid.assets, window: 2 %>
