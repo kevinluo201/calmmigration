@@ -1,4 +1,4 @@
-<div class="section">
+<div id="rounds" class="section">
   <div class="columns is-desktop">
     <div class="column is-8 is-offset-2">
       <h2 class="title is-size-4">🇨🇦 Express Entry Rounds</h2>
@@ -7,9 +7,7 @@
           Keep refreshing IRCC's webpage is bad for your health. Subscribe to receive notifications when a new round is announced.
         </p>
       </div>
-      <div class="notification is-warning">
-        ⚠️ If you are using iOS, you have to use Safari and Add to Home Screen and open this website from the home screen to receive notifications.
-      </div>
+      <%= render 'ios_warning' %>
       <div
         id="subscribe-to-rounds"
         class="mb-4"

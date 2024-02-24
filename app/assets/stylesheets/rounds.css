@@ -1,2 +1,5 @@
-#subscribe-to-rounds {
+#rounds {
+  .tutorial-img {
+    max-width: 350px;
+  }
 }

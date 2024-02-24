@@ -1,0 +1,29 @@
+<div
+  class="notification is-warning"
+  data-controller="ios-warning"
+>
+  ⚠️ If you are using iOS, you have to use Safari and Add to Home Screen and open this website from the home screen to receive notifications.<br>
+  <button
+    class="button is-rounded"
+    data-action="ios-warning#openModal"
+  >
+    Tutorial
+  </button>
+  <div class="modal" data-ios-warning-target="modal">
+    <div class="modal-background" data-action="click->ios-warning#closeModal"></div>
+    <div class="modal-card">
+      <header class="modal-card-head">
+        <p class="modal-card-title">Add to Homepage</p>
+        <button class="delete" data-action="click->ios-warning#closeModal" aria-label="close"></button>
+      </header>
+      <section class="modal-card-body">
+        <div class="content">
+          <h4 class="title">1. Click the <strong>Share</strong> button</h4>
+          <%= image_tag 'tutorial-1.png', class: 'tutorial-img' %>
+          <h4 class="title">2. Click <strong>Add to Homepage</strong></h4>
+          <%= image_tag 'tutorial-2.png', class: 'tutorial-img' %>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
