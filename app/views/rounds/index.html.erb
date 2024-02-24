@@ -17,13 +17,8 @@
         data-hello-vapid-public-key-value="<%= Base64.urlsafe_decode64(Rails.application.credentials.dig(:webpush, :public_key)).bytes %>"
         data-hello-subscribed-value="false"
       >
-        <p
-          class="is-size-5 mb-1"
-          data-hello-target="text"
-        >
-        </p>
         <%= button_tag(
-          'Subscribe',
+          'Subscribe to notifications',
           class: 'button is-success',
           data: {
             'hello-target': 'button',

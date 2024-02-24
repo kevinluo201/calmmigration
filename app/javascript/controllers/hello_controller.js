@@ -2,7 +2,7 @@ import { Controller } from "@hotwired/stimulus"
 import { post } from '@rails/request.js'
 
 export default class extends Controller {
-  static targets = ["text", "button"];
+  static targets = ["button"];
   static values = {
     vapidPublicKey: String,
     subscribed: Boolean
@@ -24,14 +24,13 @@ export default class extends Controller {
 
   updateElements() {
     if (this.subscribedValue) {
-      this.textTarget.textContent = 'You already subscribed to push notifications!';
-      this.buttonTarget.textContent = 'Unsubscribe';
+      this.buttonTarget.textContent = 'Unsubscribe from notifications';
       this.buttonTarget.classList.add('is-danger');
       this.buttonTarget.classList.add('is-outlined');
     } else {
-      this.textTarget.textContent = 'Subscribe to the new round notifications';
-      this.buttonTarget.textContent = 'Subscribe';
+      this.buttonTarget.textContent = 'Subscribe to notifications';
       this.buttonTarget.classList.remove('is-danger');
+      this.buttonTarget.classList.remove('is-outlined');
     }
   }
 
