@@ -15,9 +15,10 @@ class Round < ApplicationRecord
       title: "🇨🇦 Express Entry Round ##{number}",
       body: "Invitations issued: #{size}, CRS: #{crs}, Tie-breaking rule: #{tie_breaking_at}",
       data: {
-        url: round_url
+        url: 'https://calmmigration.ca'
       },
-      tag: "express-entry-round-#{number}"
+      tag: "express-entry-round-#{number}",
+      icon: ActionController::Base.helpers.asset_url("logo.png")
     }
   end
 
