@@ -26,9 +26,12 @@ export default class extends Controller {
     if (this.subscribedValue) {
       this.textTarget.textContent = 'You already subscribed to push notifications!';
       this.buttonTarget.textContent = 'Unsubscribe';
+      this.buttonTarget.classList.add('is-danger');
+      this.buttonTarget.classList.add('is-outlined');
     } else {
-      this.textTarget.textContent = 'Subscribe to push notifications!';
+      this.textTarget.textContent = 'Subscribe to the new round notifications';
       this.buttonTarget.textContent = 'Subscribe';
+      this.buttonTarget.classList.remove('is-danger');
     }
   }
 
