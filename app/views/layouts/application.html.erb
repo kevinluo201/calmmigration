@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>Calmmigration</title>
+    <%= favicon_link_tag asset_path('favicon.ico') %>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -26,10 +27,11 @@
   </script>
 
   <body>
-    <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+    <nav class="navbar" role="navigation" aria-label="main navigation">
       <div class="navbar-brand">
         <a class="navbar-item" href="https://calmigration.ca">
-          <h1>Calmmigration</h1>
+          <%= image_tag 'logo.png', class: 'mr-2' %>
+          <span class="is-size-4">Calmmigration</span>
         </a>
       </div>
     </nav>
