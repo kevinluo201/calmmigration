@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :rounds, only: %i[index show]
+  resources :rounds, only: %i[index]
   resources :webpush_notifications, only: %i[create]
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.

@@ -9,9 +9,4 @@ class RoundsControllerTest < ActionDispatch::IntegrationTest
     get rounds_url
     assert_response :success
   end
-
-  test "should show round" do
-    get round_url(@round)
-    assert_response :success
-  end
 end
