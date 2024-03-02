@@ -6,6 +6,18 @@ class Round < ApplicationRecord
 
   after_commit :send_notifications, if: -> { send_notifications_after_save }
 
+  def assign_raw_round(raw_round)
+    assign_attributes(
+      number: raw_round['drawNumber'],
+      name: raw_round['drawName'],
+      draw_at: DateTime.parse(raw_round['drawDateTime']),
+      size: raw_round['drawSize'].delete(',').to_i,
+      minister: raw_round['drawMinister'],
+      crs: raw_round['drawCRS'],
+      tie_breaking_at: raw_round['drawCutOff']
+    )
+  end
+
   def round_url
     ROUND_BASE_URL + "?q=#{number}"
   end
