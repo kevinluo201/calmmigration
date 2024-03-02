@@ -30,7 +30,7 @@
             <strong><%= @level_plan.year %> Total Invitations / Target: <%= @level_plan.total_invitations %> / <%= @level_plan.target %></strong>
           </div>
           <div class="level-right ml-3">
-            source: <%= link_to 'Link', @level_plan.source %>
+            source: <%= link_to 'Link', @level_plan.source, target: '_blank' %>
           </div>
         </div>
         <progress class="progress is-primary" value="<%= @level_plan.total_invitations %>" max="<%= @level_plan.target %>"></progress>
