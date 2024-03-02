@@ -13,7 +13,7 @@ class Round < ApplicationRecord
   def notification_message
     {
       title: "🇨🇦 Express Entry Round ##{number}",
-      body: "Invitations issued: #{size}, CRS: #{crs}, Tie-breaking rule: #{tie_breaking_at}",
+      body: "Invitiation issues: #{ActiveSupport::NumberHelper.number_to_delimited(size)}, CRS: #{crs}, Type: #{name}, ",
       data: {
         url: 'https://calmmigration.ca'
       },
