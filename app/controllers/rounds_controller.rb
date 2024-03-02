@@ -6,6 +6,10 @@ class RoundsController < ApplicationController
     end
   end
 
+  def trends
+
+  end
+
   protected
 
   def grid_params
