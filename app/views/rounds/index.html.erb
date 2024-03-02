@@ -24,6 +24,17 @@
           })
         %>
       </div>
+      <section id="target" class="my-5">
+        <div class="is-flex is-justify-content-space-between">
+          <div class="label-left">
+            <strong><%= @level_plan.year %> Total Invitations / Target: <%= @level_plan.total_invitations %> / <%= @level_plan.target %></strong>
+          </div>
+          <div class="level-right ml-3">
+            source: <%= link_to 'Link', @level_plan.source %>
+          </div>
+        </div>
+        <progress class="progress is-primary" value="<%= @level_plan.total_invitations %>" max="<%= @level_plan.target %>"></progress>
+      </section>
       <div class="table-container">
         <%= datagrid_table @grid, html: { class: 'table is-striped is-hoverable is-fullwidth' } %>
       </div>

@@ -16,3 +16,19 @@ rounds.values.sort_by { |a| a['drawNumber'].to_i }.each do |round|
     a_round.save!
   end
 end
+
+LevelPlan.find_or_create_by!(year: 2023) do |level_plan|
+  level_plan.target = 82880
+  level_plan.source = 'https://www.canada.ca/en/immigration-refugees-citizenship/news/notices/supplementary-immigration-levels-2023-2025.html'
+  level_plan.save!
+end
+LevelPlan.find_or_create_by!(year: 2024) do |level_plan|
+  level_plan.target = 109020
+  level_plan.source = 'https://www.canada.ca/en/immigration-refugees-citizenship/news/notices/supplementary-immigration-levels-2023-2025.html'
+  level_plan.save!
+end
+LevelPlan.find_or_create_by!(year: 2025) do |level_plan|
+  level_plan.target = 114000
+  level_plan.source = 'https://www.canada.ca/en/immigration-refugees-citizenship/news/notices/supplementary-immigration-levels-2023-2025.html'
+  level_plan.save!
+end

@@ -10,9 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_03_02_014713) do
+ActiveRecord::Schema[7.1].define(version: 2024_03_02_020808) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "level_plans", force: :cascade do |t|
+    t.integer "year"
+    t.integer "target"
+    t.string "source"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "rounds", force: :cascade do |t|
     t.string "number"
