@@ -7,7 +7,7 @@ class RoundsController < ApplicationController
   end
 
   def trends
-
+    @rounds = Round.all
   end
 
   protected
