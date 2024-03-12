@@ -9,7 +9,7 @@ namespace :rounds do
     end.sort_by { |a| a['drawNumber'].to_i }.each do |round|
       a_round = Round.find_or_initialize_by(number: round['drawNumber'])
       if a_round.new_record?
-        a_round.a_round.assign_raw_round(round)
+        a_round.assign_raw_round(round)
         a_round.send_notifications_after_save = true
         a_round.save!
       end
