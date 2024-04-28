@@ -3,7 +3,7 @@ import { BarChart, Bar, XAxis, YAxis, Tooltip, Legend, CartesianGrid, Responsive
 
 const App = () => {
   const [rounds, setRounds] = useState([]);
-  const [selectedYear, setSelectedYear] = useState(2024);
+  const [selectedYear, setSelectedYear] = useState(new Date().getFullYear());
   const [selectedName, setSelectedName] = useState("");
 
   const fetchRounds = async () => {
