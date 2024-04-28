@@ -6,6 +6,10 @@ class RoundsController < ApplicationController
     end
   end
 
+  def trends
+    @rounds = Round.all
+  end
+
   protected
 
   def grid_params
