@@ -27,7 +27,11 @@
       <section id="target" class="my-5">
         <div class="is-flex is-justify-content-space-between">
           <div class="label-left">
-            <strong><%= @level_plan.year %> Total Invitations / Target: <%= @level_plan.total_invitations %> / <%= @level_plan.target %></strong>
+            <strong>
+              <%= @level_plan.year %> Total Invitations / Target:
+              <%= ActiveSupport::NumberHelper.number_to_delimited @level_plan.total_invitations %> /
+              <%= ActiveSupport::NumberHelper.number_to_delimited @level_plan.target %>
+            </strong>
           </div>
           <div class="level-right ml-3">
             source: <%= link_to 'Link', @level_plan.source, target: '_blank' %>
@@ -39,7 +43,6 @@
         <%= datagrid_table @grid, html: { class: 'table is-striped is-hoverable is-fullwidth' } %>
       </div>
       <%= paginate @grid.assets, window: 2 %>
-
     </div>
   </div>
 </div>
