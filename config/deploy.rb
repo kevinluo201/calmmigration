@@ -14,6 +14,11 @@ ask :branch, :main
 set :deploy_to, "/var/www/calmmigration"
 set :tmp_dir, "/var/www/calmmigration/shared/tmp"
 
+after 'deploy:finalize_update', 'npm:install'
+
+# for Vite
+set :assets_prefix, 'vite'
+
 # Default value for :format is :airbrussh.
 # set :format, :airbrussh
 
