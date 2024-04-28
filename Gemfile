@@ -73,6 +73,7 @@ group :development do
   gem 'capistrano-rvm', require: false
   gem 'capistrano-passenger', require: false
   gem 'capistrano-npm', require: false
+  gem 'capistrano-nvm', require: false
 end
 
 group :test do
