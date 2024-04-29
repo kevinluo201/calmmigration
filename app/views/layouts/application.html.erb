@@ -12,15 +12,18 @@
     <link rel="apple-touch-startup-image" href="<%= asset_path('webapp-icon.png') %>">
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= javascript_importmap_tags %>
+    <% if controller.action_name == 'trends' %>
+      <%= vite_client_tag %>
+      <%= vite_javascript_tag 'application.jsx' %>
+    <% else %>
+      <%= javascript_importmap_tags %>
+    <% end %>
 
     <script src="https://kit.fontawesome.com/4335c2f54b.js" crossorigin="anonymous"></script>
 
     <script>
       window.vapidPublicKey = new Uint8Array(<%= Base64.urlsafe_decode64(Rails.application.credentials.dig(:webpush, :public_key)).bytes %>)
     </script>
-    <%= vite_client_tag %>
-    <%= vite_javascript_tag 'application.jsx' %>
   </head>
 
   <!-- Google tag (gtag.js) -->
