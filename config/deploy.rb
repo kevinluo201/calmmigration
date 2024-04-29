@@ -14,11 +14,6 @@ ask :branch, :main
 set :deploy_to, "/var/www/calmmigration"
 set :tmp_dir, "/var/www/calmmigration/shared/tmp"
 
-after 'deploy:finalize_update', 'npm:install'
-
-# for Vite
-set :assets_prefix, 'vite'
-
 # Default value for :format is :airbrussh.
 # set :format, :airbrussh
 
@@ -33,7 +28,7 @@ set :assets_prefix, 'vite'
 # append :linked_files, "config/database.yml", 'config/master.key'
 
 # Default value for linked_dirs is []
-append :linked_dirs, "public/assets", "log", "tmp/pids", "tmp/sockets"
+append :linked_dirs, "public/assets", "log", "tmp/pids", "tmp/sockets", "node_modules"
 # append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "public/system", "vendor", "storage"
 
 # Default value for default_env is {}
@@ -49,3 +44,9 @@ append :linked_dirs, "public/assets", "log", "tmp/pids", "tmp/sockets"
 # set :ssh_options, verify_host_key: :secure
 
 set :rvm_ruby_version, '3.1.2'
+
+# for Vite
+set :nvm_type, :user # or :system, depends on your nvm setup
+set :nvm_node, 'v18.20.2'
+set :nvm_map_bins, %w{npm rake}
+set :assets_prefix, 'vite/.vite'
