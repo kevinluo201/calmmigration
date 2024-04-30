@@ -41,3 +41,5 @@ node_modules
 # https://vitejs.dev/guide/env-and-mode.html#env-files
 *.local
 
+# Ignore database configuration files
+/config/database.yml
