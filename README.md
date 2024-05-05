@@ -4,12 +4,13 @@ It collects the Canada IRCC's Express Entry rounds automatically. Users can subs
 
 ## Development Environment setup (on Mac)
 1. install Homebrew https://brew.sh/
-2. install rbenv https://github.com/rbenv/rbenv?tab=readme-ov-file#homebrew
+2. install rbenv https://github.com/rbenv/rbenv?tab=readme-ov-file#homebrew with homebrew
 3. after install rbenv, execute `rbenv install 3.1.2` to install ruby 3.1.2
-4. install Postgres https://www.postgresql.org/download/macosx/
-5. install libpq `brew install libpq`
-6. go to the project directory
-7. put `master.key` under `/config`
-8. execute `bundle install`
-9. execute `bundle exec rails db:create db:migrate db:seeds`
-10. execute `rails s`
+4. go to the project directory
+5. execute `rm config/credentials.yml.enc`
+6. execute `EDITOR=vim rails credentials:edit` and then save and quit
+7. execute `bundle install`
+8. execute `bundle exec rails db:create db:migrate db:seed`
+9. execute `rails s`
+10. open a new tab in terminal and execute `bin/vite dev`
+11. open 'localhost:3000' in the browser
