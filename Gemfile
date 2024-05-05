@@ -8,9 +8,6 @@ gem "rails", "~> 7.1.3"
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 
-# Use pg as the database for Active Record
-gem "pg", "~> 1.5"
-
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", ">= 5.0"
 
@@ -51,7 +48,12 @@ gem 'web-push', "~> 3.0.1"
 gem 'whenever', "~> 1.0.0", require: false
 gem 'vite_rails', "~> 3.0.17"
 
+group :production do
+  gem "pg", "~> 1.5"
+end
+
 group :development, :test do
+  gem "sqlite3", "~> 1.7"
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri windows ]
 end
