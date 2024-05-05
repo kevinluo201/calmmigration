@@ -27,6 +27,9 @@ console.log('Visit the guide for more information: ', 'https://vite-ruby.netlify
 // Example: Import a stylesheet in app/frontend/index.css
 // import '~/index.css'
 
+import "@hotwired/turbo-rails"
+import '../controllers'
+
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 import App from '../components/App';
