@@ -23,6 +23,7 @@ webpush:
   public_key: vapid_key.public_key you saw in the previous step
   private_key: vapid_key.private_key you saw in the previous step
 ```
+7. initialize database byt running `bundle exec rails db:create db:migrate db:seed`
 
 ### Start dev server
 1. execute `rails s`
