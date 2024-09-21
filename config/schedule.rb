@@ -17,7 +17,7 @@
 #   runner "AnotherModel.prune_old_records"
 # end
 
-every '15 10-15 * * *' do
+every '15 10-15 * * 1-5' do
   rake 'rounds:poll'
 end
 
