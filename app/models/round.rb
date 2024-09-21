@@ -1,6 +1,6 @@
 class Round < ApplicationRecord
   ROUND_BASE_URL = 'https://www.canada.ca/en/immigration-refugees-citizenship/corporate/mandate/policies-operational-instructions-agreements/ministerial-instructions/express-entry-rounds/invitations.html'
-  GET_ROUNDS_JSON_URL = 'https://www.canada.ca/content/dam/ircc/documents/json/ee_rounds_4_en.json'
+  GET_ROUNDS_JSON_URL = 'https://faas-tor1-70ca848e.doserverless.co/api/v1/web/fn-b5a6fcc8-e8c6-4f13-b36a-884a78df774d/sample/getJSON'
 
   attr_accessor :send_notifications_after_save
 
